@@ -1,0 +1,89 @@
+.CreateCompanyCont,
+.CreatePersonalCont {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.CreateCompanyTitle,
+.InvitesHead,
+.AdminTitle {
+  color: var(--text-color);
+}
+
+.CreateCompanyForm,
+.CreatePersonalForm {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.CreateCompanyInput,
+.SearchBar {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.CreateCompanyButton,
+.CreatePersonalButton,
+.InviteButton {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.CreateCompanyButton:hover,
+.CreatePersonalButton:hover,
+.InviteButton:hover{
+  background-color: var(--link-color);
+}
+
+.InvitesCont,
+.AdminSection,
+.UserList {
+  margin-top: 20px;
+}
+
+.NotificationCont {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.UserItem {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.Error {
+  color: red;
+  margin-top: 10px;
+}
+
+.UserList{
+  display: flex;
+  margin: 0;
+  flex-wrap: wrap;
+}
