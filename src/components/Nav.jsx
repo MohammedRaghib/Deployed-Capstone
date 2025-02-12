@@ -2,11 +2,11 @@ import React from "react";
 import "./styles/nav.css";
 
 function Nav({ userInfo, setUserInfo }) {
-  const BaseURL = "https://final-capstone-django.onrender.com/";
+  const BaseURL = "https://final-capstone-django.onrender.com";
 
   const handleLogOut = async () => {
     try {
-      const response = await fetch(`${BaseURL}api/logout/`, {
+      const response = await fetch(`${BaseURL}/api/logout/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
