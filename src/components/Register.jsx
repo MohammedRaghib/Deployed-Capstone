@@ -12,7 +12,7 @@ const Register = ({ setUserInfo }) => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  const BaseURL = "http://127.0.0.1:8000/";
+  const BaseURL = "https://final-capstone-django.onrender.com/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

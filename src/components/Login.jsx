@@ -8,7 +8,7 @@ const Login = ({ setUserInfo, userInfo }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const BaseURL = "http://127.0.0.1:8000/";
+  const BaseURL = "https://final-capstone-django.onrender.com/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

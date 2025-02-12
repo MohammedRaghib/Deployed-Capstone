@@ -8,7 +8,7 @@ const OnePersonalDetails = ({ userInfo }) => {
   const [loading, setLoading] = useState(true);
   const [personalInfoFetched, setPersonalInfoFetched] = useState(false);
   const [allCategories, setAllCategories] = useState([]);
-  const BaseURL = "http://127.0.0.1:8000/";
+  const BaseURL = "https://final-capstone-django.onrender.com/";
   const [statusFilter, setStatusFilter] = useState("");
   const [dateFilter, setDateFilter] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
@@ -311,7 +311,7 @@ const OnePersonalDetails = ({ userInfo }) => {
     );
   });
   console.log("PersonalInfo:", PersonalInfo);
-  const API_URL = `http://127.0.0.1:8000/categories/${PersonalInfo.id}`;
+  const API_URL = `https://final-capstone-django.onrender.com/categories/${PersonalInfo.id}`;
 
   const getCategories = async () => {
     try {

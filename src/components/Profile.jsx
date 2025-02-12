@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles/profile.css";
 
 function Profile({ userInfo, setUserInfo }) {
-  const BaseURL = "http://127.0.0.1:8000/";
+  const BaseURL = "https://final-capstone-django.onrender.com/";
   const [formData, setFormData] = useState({
     email: userInfo?.user.email || "",
     username: userInfo?.user.username || "",

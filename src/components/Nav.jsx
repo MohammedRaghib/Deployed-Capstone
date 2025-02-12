@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/nav.css";
 
 function Nav({ userInfo, setUserInfo }) {
-  const BaseURL = "http://127.0.0.1:8000/";
+  const BaseURL = "https://final-capstone-django.onrender.com/";
 
   const handleLogOut = async () => {
     try {

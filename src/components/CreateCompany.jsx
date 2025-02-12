@@ -14,7 +14,7 @@ const CreateCompany = ({ userInfo }) => {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const BaseURL = "http://127.0.0.1:8000/";
+  const BaseURL = "https://final-capstone-django.onrender.com/";
 
   const fetchCompanies = async () => {
     try {
