@@ -25,7 +25,6 @@ const CreatePersonal = ({ userInfo }) => {
         console.error("Error");
       }
       const data = await response.json();
-      console.log("Personal data:", data);
       setPersonalInfo(data.personal || {});
     } catch (error) {
       console.error("Error fetching companies:", error);
@@ -50,7 +49,6 @@ const CreatePersonal = ({ userInfo }) => {
       );
       if (response.ok) {
         const data = await response.json();
-        console.log("Personal data:", data);
       } else {
         const errorData = await response.json();
         console.error("Error:", errorData);
@@ -83,7 +81,6 @@ const CreatePersonal = ({ userInfo }) => {
         return [];
       }
       const data = await response.json();
-      console.log("Users fetched:", data.all_users);
       setUsers(data.all_users);
       return data.all_users;
     } catch (error) {
@@ -92,7 +89,6 @@ const CreatePersonal = ({ userInfo }) => {
   };
   const handleUserSelect = (user) => {
     setAdmin(user.id);
-    console.log("Selected admin:", user.username);
   };
   const isEmpty = (obj) => {
     if (obj == null) {

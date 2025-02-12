@@ -39,7 +39,6 @@ const PersonalDashboard = ({ userInfo }) => {
           },
         });
         const data = await response.json();
-        console.log("personal data:", data);
         setPersonal(data.personal || {});
       } catch (error) {
         console.error("Error fetching personal:", error);
@@ -64,7 +63,6 @@ const PersonalDashboard = ({ userInfo }) => {
           setTasks(data.personal.tasks || []);
           setPersonalInfoFetched(true);
           setPersonalId(data.personal.id);
-          console.log("PersonalInfo:", data);
         } catch (error) {
           console.error("Error fetching personal info:", error);
         }
@@ -74,7 +72,6 @@ const PersonalDashboard = ({ userInfo }) => {
   }, [personal, personalInfoFetched, userInfo]);
 
   const API_URL = `https://final-capstone-django.onrender.com/categories/${personalid}`;
-  console.log("API URL:", API_URL);
 
   const DeletePersonal = async () => {
     try {
@@ -109,7 +106,6 @@ const PersonalDashboard = ({ userInfo }) => {
       }
       const data = await response.json();
       alert("Task created successfully");
-      console.log("Created task:", data);
       setLoading(false);
     } catch (error) {
       setLoading(false);
@@ -128,7 +124,6 @@ const PersonalDashboard = ({ userInfo }) => {
         },
       });
       const data = await response.json();
-      console.log(data);
       setuserNotifications(data.notifications);
     } catch (error) {
       console.error("Error fetching notifications:", error);
@@ -184,7 +179,6 @@ const PersonalDashboard = ({ userInfo }) => {
 
       const data = await response.json();
       alert("Task updated successfully");
-      console.log("Updated task:", data);
     } catch (error) {
       console.error("Error editing task:", error);
       alert("Failed to edit task");
@@ -208,7 +202,6 @@ const PersonalDashboard = ({ userInfo }) => {
 
       const data = await response.json();
       alert("Comment added successfully");
-      console.log("Added comment:", data);
     } catch (error) {
       console.error("Error adding comment:", error);
       alert("Failed to add comment");
@@ -261,7 +254,6 @@ const PersonalDashboard = ({ userInfo }) => {
 
       const data = await response.json();
       alert("Task status updated successfully");
-      console.log("Updated task status:", data);
     } catch (error) {
       console.error("Error updating task status:", error);
       alert("Failed to update task status");
@@ -359,7 +351,6 @@ const PersonalDashboard = ({ userInfo }) => {
   useEffect(() => {
     if (personalid) {
       const API_URL = `https://final-capstone-django.onrender.com/categories/${personalid}`;
-      console.log("API URL:", API_URL);
 
       const getCategories = async () => {
         try {
@@ -372,7 +363,6 @@ const PersonalDashboard = ({ userInfo }) => {
           });
           const data = await response.json();
           if (response.ok) {
-            console.log("Categories:", data);
             setAllCategories(data.categories || []);
           } else {
             console.error(data.detail);

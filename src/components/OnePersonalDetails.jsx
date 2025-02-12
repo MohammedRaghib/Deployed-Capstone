@@ -62,7 +62,6 @@ const OnePersonalDetails = ({ userInfo }) => {
       }
       const data = await response.json();
       alert("Task created successfully");
-      console.log("Created task:", data);
       setLoading(false);
     } catch (error) {
       setLoading(false);
@@ -82,7 +81,6 @@ const OnePersonalDetails = ({ userInfo }) => {
         },
       });
       const data = await response.json();
-      console.log(data);
       setuserNotifications(data.notifications);
     } catch (error) {
       console.error("Error fetching notifications:", error);
@@ -138,7 +136,6 @@ const OnePersonalDetails = ({ userInfo }) => {
 
       const data = await response.json();
       alert("Task updated successfully");
-      console.log("Updated task:", data);
     } catch (error) {
       console.error("Error editing task:", error);
       alert("Failed to edit task");
@@ -163,7 +160,6 @@ const OnePersonalDetails = ({ userInfo }) => {
 
       const data = await response.json();
       alert("Comment added successfully");
-      console.log("Added comment:", data);
     } catch (error) {
       console.error("Error adding comment:", error);
       alert("Failed to add comment");
@@ -216,7 +212,6 @@ const OnePersonalDetails = ({ userInfo }) => {
 
       const data = await response.json();
       alert("Task status updated successfully");
-      console.log("Updated task status:", data);
     } catch (error) {
       console.error("Error updating task status:", error);
       alert("Failed to update task status");
@@ -310,7 +305,6 @@ const OnePersonalDetails = ({ userInfo }) => {
       matchesStatus && categoryMatches && matchesDateRange && matchesSearchQuery
     );
   });
-  console.log("PersonalInfo:", PersonalInfo);
   const API_URL = `https://final-capstone-django.onrender.com/categories/${PersonalInfo.id}`;
 
   const getCategories = async () => {
@@ -324,7 +318,6 @@ const OnePersonalDetails = ({ userInfo }) => {
       });
       const data = await response.json();
       if (response.ok) {
-        console.log("Categories:", data);
         setAllCategories(data.categories || []);
       } else {
         console.error(data.detail);

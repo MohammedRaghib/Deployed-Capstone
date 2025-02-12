@@ -44,13 +44,11 @@ function Profile({ userInfo, setUserInfo }) {
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
         const info = localStorage.getItem("userInfo");
         const parsed = JSON.parse(info);
         parsed.user = data.user;
         localStorage.setItem("userInfo", JSON.stringify(parsed));
         setUserInfo(parsed);
-        console.log("Did update", userInfo);
       } else {
         const errorData = await response.json();
         console.error("Error:", errorData);

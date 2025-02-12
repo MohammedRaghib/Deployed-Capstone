@@ -66,7 +66,6 @@ const AllCompanyTasks = ({
   });
 
   const handleOpenModal = (assignedUserIds) => {
-    console.log("Assigned User IDs: ", assignedUserIds);
     const assignedUserObjects = assignedUserIds.map((userId) => {
       const user = all_users.find((user) => user.id === userId);
       if (!user) {
@@ -78,7 +77,6 @@ const AllCompanyTasks = ({
     setIsModalOpen(true);
   };  
   
-  console.log("Current Assigned Users: ", all_users, currentAssignedUsers);
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setUserSearchQuery("");

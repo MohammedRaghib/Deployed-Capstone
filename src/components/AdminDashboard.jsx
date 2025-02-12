@@ -45,7 +45,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
           },
         });
         const data = await response.json();
-        console.log("Companies data:", data);
         setCompanies(data.company || {});
       } catch (error) {
         console.error("Error fetching companies:", error);
@@ -73,7 +72,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
             const data = await response.json();
             setCompanyInfo(data.company || {});
             setCompanyInfoFetched(true);
-            console.log("CompanyInfo:", data);
           } catch (error) {
             console.error("Error fetching company info:", error);
           }
@@ -97,7 +95,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
       if (response.ok) {
         const data = await response.json();
         setFetchCount((prev) => (prev += 1));
-        console.log(FetchCount);
         return data.all_users;
       } else {
         const errorData = await response.json();
@@ -157,7 +154,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
 
       const data = await response.json();
       alert("User invited, awaiting response");
-      console.log("Invited user,", data);
       // await AddUserToList(userid);
     } catch (error) {
       alert("Error inviting user");
@@ -186,7 +182,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
       }
       const data = await response.json();
       alert("Task created successfully");
-      console.log("Created task:", data);
       setLoading(false);
     } catch (error) {
       setLoading(false);
@@ -205,7 +200,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
         },
       });
       const data = await response.json();
-      console.log(data);
       setuserNotifications(data.notifications);
     } catch (error) {
       console.error("Error fetching notifications:", error);
@@ -306,7 +300,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
 
       const data = await response.json();
       alert("Task updated successfully");
-      console.log("Updated task:", data);
     } catch (error) {
       console.error("Error editing task:", error);
       alert("Failed to edit task");
@@ -330,7 +323,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
 
       const data = await response.json();
       alert("Comment added successfully");
-      console.log("Added comment:", data);
     } catch (error) {
       console.error("Error adding comment:", error);
       alert("Failed to add comment");
@@ -358,7 +350,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
 
       const data = await response.json();
       alert("Comment updated successfully");
-      console.log("Updated comment:", data);
     } catch (error) {
       console.error("Error editing comment:", error);
       alert("Failed to edit comment");
@@ -384,7 +375,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
       }
 
       alert("User removed successfully");
-      console.log("Removed user ID:", userid);
       navigate("/create-company");
     } catch (error) {
       console.error("Error removing user:", error);
@@ -439,7 +429,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
 
       const data = await response.json();
       alert("Task status updated successfully");
-      console.log("Updated task status:", data);
     } catch (error) {
       console.error("Error updating task status:", error);
       alert("Failed to update task status");
@@ -562,8 +551,6 @@ const AdminDashboard = ({ userInfo, setUserInfo }) => {
       }
 
       const data = await response.json();
-      console.log(data);
-
       if (method === "POST") {
         console.log("User added to the company");
       } else if (method === "DELETE") {

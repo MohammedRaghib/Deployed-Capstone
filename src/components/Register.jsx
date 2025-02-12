@@ -42,7 +42,6 @@ const Register = ({ setUserInfo }) => {
       const data = await response.json();
       if (response.status === 201) {
         alert("Successfully Registered!");
-        console.log(data);
       setLoading(false);
       navigate("/login");
       } else {

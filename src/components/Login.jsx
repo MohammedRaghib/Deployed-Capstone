@@ -36,7 +36,6 @@ const Login = ({ setUserInfo, userInfo }) => {
     }
   };
 
-  console.log("TaskPlan#2025!*");
   return (
     <div className="login-container">
       <main className="logininsidecont">

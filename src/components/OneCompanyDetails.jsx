@@ -44,7 +44,6 @@ function OneCompanyDetails({ userInfo }) {
       if (response.ok) {
         const data = await response.json();
         setFetchCount((prev) => (prev += 1));
-        console.log(FetchCount);
         return data.all_users;
       } else {
         const errorData = await response.json();
@@ -94,7 +93,6 @@ function OneCompanyDetails({ userInfo }) {
 
       const data = await response.json();
       alert("User invited, awaiting response");
-      console.log("Invited user,", data);
     } catch (error) {
       alert("Error inviting user");
       console.error(error);
@@ -123,7 +121,6 @@ function OneCompanyDetails({ userInfo }) {
       }
       const data = await response.json();
       alert("Task created successfully");
-      console.log("Created task:", data);
       setLoading(false);
     } catch (error) {
       setLoading(false);
@@ -210,7 +207,6 @@ function OneCompanyDetails({ userInfo }) {
 
       const data = await response.json();
       alert("Task updated successfully");
-      console.log("Updated task:", data);
     } catch (error) {
       console.error("Error editing task:", error);
       alert("Failed to edit task");
@@ -235,7 +231,6 @@ function OneCompanyDetails({ userInfo }) {
 
       const data = await response.json();
       alert("Comment added successfully");
-      console.log("Added comment:", data);
     } catch (error) {
       console.error("Error adding comment:", error);
       alert("Failed to add comment");
@@ -263,7 +258,6 @@ function OneCompanyDetails({ userInfo }) {
 
       const data = await response.json();
       alert("Comment updated successfully");
-      console.log("Updated comment:", data);
     } catch (error) {
       console.error("Error editing comment:", error);
       alert("Failed to edit comment");
@@ -289,7 +283,6 @@ function OneCompanyDetails({ userInfo }) {
       }
 
       alert("User removed successfully");
-      console.log("Removed user ID:", userid);
     } catch (error) {
       console.error("Error removing user:", error);
       alert("Failed to remove user");
@@ -369,7 +362,6 @@ function OneCompanyDetails({ userInfo }) {
 
       const data = await response.json();
       alert("Task status updated successfully");
-      console.log("Updated task status:", data);
     } catch (error) {
       console.error("Error updating task status:", error);
       alert("Failed to update task status");
@@ -419,7 +411,6 @@ function OneCompanyDetails({ userInfo }) {
         },
       });
       const data = response;
-      console.log("Deleted company:", data);
     } catch (error) {
       console.error("Error deleting company:", error);
     }

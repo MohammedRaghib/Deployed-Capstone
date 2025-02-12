@@ -13,7 +13,6 @@ const Notification = ({ notification, delNotification }) => (
         <p className="NotificationMessage">{notification.message}</p>
         <button
           onClick={() => {
-            console.log(notification.user);
             delNotification(notification.user, notification.id)}}
         >
           Delete

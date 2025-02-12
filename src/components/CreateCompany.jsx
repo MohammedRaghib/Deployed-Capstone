@@ -27,7 +27,6 @@ const CreateCompany = ({ userInfo }) => {
         console.error("Error");
       }
       const data = await response.json();
-      console.log("Companies data:", data);
       setCompany(data.company || {});
     } catch (error) {
       console.error("Error fetching companies:", error);
@@ -52,7 +51,6 @@ const CreateCompany = ({ userInfo }) => {
           const data = await response.json();
           setCompanyInfo(data.company || {});
           setCompanyInfoFetched(true);
-          console.log("CompanyInfo:", data);
         } catch (error) {
           console.error("Error fetching company info:", error);
         }
@@ -124,7 +122,6 @@ const CreateCompany = ({ userInfo }) => {
       }
 
       const data = await response.json();
-      console.log(data);
 
       if (method === "POST") {
         console.log("User added to the company");
@@ -155,7 +152,6 @@ const CreateCompany = ({ userInfo }) => {
         return [];
       }
       const data = await response.json();
-      console.log("Users fetched:", data.all_users);
       setUsers(data.all_users);
       return data.all_users;
     } catch (error) {
